@@ -12,10 +12,11 @@ if (Meteor.isClient)
 
   Template.hello.events(
     'click div' : (e) ->
-      console.log "#{e.x} < #{($('body').width() / 2)}"
-      if e.x < ($('body').width / 2)
+      if e.x < ($('body').width() / 2)
+        console.log Clicks.findOne({person: 'Stirling'})
         Clicks.update({_id:Clicks.findOne({person: 'Stirling'})['_id']}, { $inc: { clicks: 1 } })
       else
+        console.log Clicks.findOne({person: 'Derek'})
         Clicks.update({_id:Clicks.findOne({person: 'Derek'})['_id']}, { $inc: { clicks: 1 } })
   )
 
