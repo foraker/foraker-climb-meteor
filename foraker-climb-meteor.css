@@ -1,0 +1,6 @@
+/* CSS declarations go here */
+body, html, div.container { height: 100%; }
+div.container {
+  width: 100%;
+  text-align: center;
+}
