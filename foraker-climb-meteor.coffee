@@ -1,26 +1,25 @@
-Clicks = new Meteor.Collection('clicks')
+Climbers = new Meteor.Collection('climbers')
 
 if (Meteor.isClient)
-  Template.hello.greeting = ->
-    return "Welcome to foraker-climb-meteor.";
+  Template.climbing.climbers = ->
+    Climbers.find({}, {sort: {score: -1, name: 1}})
 
-  Template.hello.stirlingClicks = ->
-    Clicks.findOne({ person: 'Stirling' })?.clicks || 0
+  Template.climber.clicks = ->
+    Climbers.findOne({ _id: @_id }).clicks
 
-  Template.hello.derekClicks = ->
-    Clicks.findOne({ person: 'Derek' })?.clicks || 0
+  Template.climber.name = ->
+    Climbers.findOne({ _id: @_id }).name
 
-  Template.hello.events(
-    'click div' : (e) ->
-      if e.x < ($('body').width() / 2)
-        console.log Clicks.findOne({person: 'Stirling'})
-        Clicks.update({_id:Clicks.findOne({person: 'Stirling'})['_id']}, { $inc: { clicks: 1 } })
-      else
-        console.log Clicks.findOne({person: 'Derek'})
-        Clicks.update({_id:Clicks.findOne({person: 'Derek'})['_id']}, { $inc: { clicks: 1 } })
+  Template.climber.htmlClass = ->
+    "climber #{@name.toLowerCase()}"
+
+  Template.climber.events(
+    'click': ->
+      Climbers.update({ _id: @_id }, { $inc: { clicks: 1 } })
   )
 
 if (Meteor.isServer)
   Meteor.startup ->
-    Clicks.insert(person: 'Stirling', clicks: 0)
-    Clicks.insert(person: 'Derek', clicks: 0)
+    if Climbers.find().count() is 0
+      Climbers.insert(name: 'Stirling', clicks: 0)
+      Climbers.insert(name: 'Derek', clicks: 0)

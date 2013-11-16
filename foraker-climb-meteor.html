@@ -3,16 +3,20 @@
 </head>
 
 <body>
-  {{> hello}}
+  {{> climbing}}
 </body>
 
-<template name="hello">
+<template name="climbing">
   <div class="container">
-    <h1>Hello World!</h1>
-    <p>
-      {{greeting}}
-      Stirling clicks: {{stirlingClicks}}
-      Derek clicks: {{derekClicks}}}
-    </p>
+     {{#each climbers}}
+      {{> climber}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="climber">
+  <div class="{{htmlClass}}">
+    <p>{{name}}</p>
+    <p>{{clicks}}</p>
   </div>
 </template>
