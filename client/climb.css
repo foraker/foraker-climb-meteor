@@ -11,10 +11,26 @@ div.container .climber {
   float: left;
 }
 
+div.container .climber p {
+  user-select: none;
+}
+
 div.container .climber.derek {
   background-color: blue;
 }
 
 div.container .climber.stirling {
   background-color: red;
+}
+
+div.container .climber .avatar {
+  position: absolute;
+}
+
+div.container .climber.derek .avatar {
+  left: 24%;
+}
+
+div.container .climber.stirling .avatar {
+  left: 74%;
 }

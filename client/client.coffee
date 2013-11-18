@@ -7,8 +7,14 @@ Template.climber.clicks = ->
 Template.climber.name = ->
   Climbers.findOne({ _id: @_id }).name
 
+Template.climber.height = ->
+  Climbers.findOne({ _id: @_id }).height
+
 Template.climber.htmlClass = ->
   "climber #{@name.toLowerCase()}"
+
+Template.climber.bottomPosition = ->
+  "#{@height-5}%"
 
 Template.climber.events(
   'click': ->
