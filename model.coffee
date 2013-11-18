@@ -1,6 +1,4 @@
-Climbers = new Meteor.Collection('climbers')
-exports = this
-exports.Climbers = Climbers
+@Climbers = new Meteor.Collection('climbers')
 
 Meteor.methods(
   clickClimber: (_id) ->
