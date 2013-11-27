@@ -2,8 +2,8 @@ SLIDE_INCREMENT = 0.5
 
 Meteor.startup ->
   if Climbers.find().count() is 0
-    Climbers.insert(name: 'Stirling', clicks: 0, previous_height: 49, height: 50, summit_count: 0, death_count: 0)
-    Climbers.insert(name: 'Derek', clicks: 0, previous_height: 49, height: 50, summit_count: 0, death_count: 0)
+    Climbers.insert(name: 'Stirling', clicks: 0, previous_height: 49, height: 50, summit_count: 0, death_count: 0, charity: "Environment +")
+    Climbers.insert(name: 'Derek', clicks: 0, previous_height: 49, height: 50, summit_count: 0, death_count: 0, charity: "Children's Hospital")
 
   slide = Meteor.bindEnvironment ->
     # Increment death if about to die

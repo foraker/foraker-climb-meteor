@@ -1,38 +1,274 @@
-/* CSS declarations go here */
-body, html, div.container, .climber { height: 100%; }
-
-div.container {
-  width: 1024px;
-  height: 976px;
-  text-align: center;
-  background: url('/images/background.png');
+@keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 0 -100%; }
+}
+@-webkit-keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 0 -100%; }
+}
+@-ms-keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 0 -100%; }
+}
+@-moz-keyframes animatedBackground {
+  from { background-position: 0 0; }
+  to { background-position: 0 -100%; }
 }
 
-div.container .climber {
+@keyframes animatedBackgroundb{
+  from { background-position: -30px 20px; }
+  to { background-position: 15px -100%; }
+}
+@-webkit-keyframes animatedBackgroundb {
+  from { background-position: -30px 20px; }
+  to { background-position: 15px -100%; }
+}
+@-ms-keyframes animatedBackgroundb {
+  from { background-position: -30px 20px; }
+  to { background-position: 15px -100%; }
+}
+@-moz-keyframes animatedBackgroundb {
+  from { background-position: -30px 20px; }
+  to { background-position: 15px -100%; }
+}
+
+body {
+  margin: 0;
+  padding: 0 0 30px 0;
+  background-color: #363026;
+  color: #707070;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1,h2,h3,h4,h5 {
+  margin: 0;
+}
+
+header {
+  width: 558px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  background: url(/images/title.png) no-repeat;
+  width: 289px;
+  height: 66px;
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+  z-index: 1;
+}
+
+h1 span {
+  display: none;
+}
+
+h2 {
+  background-color: #2eb2bd;
+  color: #fff;
+  font-size: 42px;
+}
+
+hgroup + p {
+  padding-top: 20px;
+}
+
+.wrapper {
+  background-color: #c6c6c6;
+  background-image: -webkit-radial-gradient(center center, ellipse cover, #e9e9e9, #c6c6c6 );
+  padding-top: 20px;
+}
+
+/* Let it snow */
+.inner {
+  background-image: url(/images/snow.png);
+  background-position: 0px 0px;
+  background-repeat: repeat;
+
+  animation: animatedBackground 10s linear infinite;
+  -ms-animation: animatedBackground 10s linear infinite;
+  -moz-animation: animatedBackground 10s linear infinite;
+  -webkit-animation: animatedBackground 10s linear infinite;
+}
+
+.inner2 {
+  background-image: url(/images/snow.png);
+  background-position: -30px 20px;
+  background-repeat: repeat;
+  position: relative;
+
+  animation: animatedBackgroundb 20s linear infinite;
+  -ms-animation: animatedBackgroundb 20s linear infinite;
+  -moz-animation: animatedBackgroundb 20s linear infinite;
+  -webkit-animation: animatedBackgroundb 20s linear infinite;
+}
+
+.charity-name {
+  display: block;
+}
+
+section {
+  overflow: hidden;
+}
+
+.brother {
   width: 50%;
   float: left;
+  color: #991c20;
+  position: relative;
 }
-
-div.container .climber p {
-  user-select: none;
-}
-
-div.container .climber.derek {
-  /*background-color: blue;*/
-}
-
-div.container .climber.stirling {
-  /*background-color: red;*/
-}
-
-div.container .climber .avatar {
+.avatar {
   position: absolute;
 }
-
-div.container .climber.derek .avatar {
-  left: 24%;
+.details {
+  text-align: center;
+  width: 250px;
 }
 
-div.container .climber.stirling .avatar {
-  left: 74%;
+.details p {
+  color: #991c20;
+  font-size: 42px;
+  margin: 0;
 }
+
+.details  p {
+  font-family: 'Mr De Haviland', cursive;
+}
+
+.stirling .details {
+  float: right;
+}
+
+.brother h3 {
+  font-size: 24px;
+}
+
+.brother h4 {
+  font-size: 18px;
+}
+
+/*hgroup + h5 {
+  margin-top: 25px;
+}*/
+
+h5 {
+  color: #707070;
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.main {
+  overflow: hidden;
+  height: 725px;
+  display: block;
+  position: relative;
+  background: url(../images/peak2.png) no-repeat center 75px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+footer.bank {
+  height: 115px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+
+}
+
+footer button {
+  color: #84191c;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 12px;
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+}
+
+footer.bank img {
+  position: absolute; bottom: 0;
+  right: 233px;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+footer p {
+  width: 650px;
+  color: #fff;
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+footer a {
+  color: #2eb2bd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Ribbon */
+h2 {
+  font-size: 42px !important;
+
+  width: 500px;
+  position: relative;
+  background: #2eb2bd;
+  color: #fff;
+  text-align: center;
+  padding: 11px 0; /* Adjust to suit */
+  margin: 0  auto; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+
+h2:before, h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 10px;
+  border: 25px solid #26939c;
+  z-index: -1;
+}
+
+h2:before {
+  left: -45px;
+  border-right-width: 20px;
+  border-left-color: transparent;
+}
+
+h2:after {
+  right: -45px;
+  border-left-width: 20px;
+  border-right-color: transparent;
+}
+
+.brother h3 span{
+  display: inline-block;
+  height: 24px;
+  width: 50px;
+
+  top: 2px;
+  position: relative;
+  top: 3px;
+}
+
+.derek h3 span {
+  background: url(/images/derek-bg.png) no-repeat 0 3px;
+}
+
+.stirling h3 span {
+  background: url(../images/stirling-bg.png) no-repeat 0 3px;
+}
+
+.brother h3 span.tr {
+  background-position: -111px 3px;
+}
+
+header hgroup { position: relative; z-index: 1; }

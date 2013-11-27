@@ -1,5 +1,5 @@
 Template.climbing.climbers = ->
-  Climbers.find({}, {sort: {score: -1, name: 1}})
+  Climbers.find({}, {sort: {name: 1}})
 
 Template.climber.clicks = ->
   Climbers.findOne({ _id: @_id }).clicks
@@ -16,8 +16,11 @@ Template.climber.name = ->
 Template.climber.height = ->
   Climbers.findOne({ _id: @_id }).height
 
+Template.climber.charity = ->
+  Climbers.findOne({ _id: @_id }).charity
+
 Template.climber.htmlClass = ->
-  "climber #{@name.toLowerCase()}"
+  "brother #{@name.toLowerCase()}"
 
 Template.climber.bottomPosition = ->
   "#{@height-5}%"
