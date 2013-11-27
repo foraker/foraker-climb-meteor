@@ -14,4 +14,4 @@ Meteor.startup ->
     Climbers.update({ height: { $gt: 0 } }, $inc: { height: -SLIDE_INCREMENT }, { multi: true })
   , (e) ->
     console.log e
-  setInterval(slide, 4000)
+  setInterval(slide, 1000)
