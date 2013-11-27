@@ -4,6 +4,12 @@ Template.climbing.climbers = ->
 Template.climber.clicks = ->
   Climbers.findOne({ _id: @_id }).clicks
 
+Template.climber.summits = ->
+  Climbers.findOne({ _id: @_id }).summit_count
+
+Template.climber.deaths = ->
+  Climbers.findOne({ _id: @_id }).death_count
+
 Template.climber.name = ->
   Climbers.findOne({ _id: @_id }).name
 
