@@ -4,6 +4,13 @@
 
 <body>
   {{> climbing}}
+
+  <!-- eager load images -->
+  <img src="/images/derek-falling.png" style="display: none">
+  <img src="/images/stirling-falling.png" style="display: none">
+  <img src="/images/stirling-climbing.gif" style="display: none">
+  <img src="/images/derek-cheering.gif" style="display: none">
+  <img src="/images/stirling-cheering.gif" style="display: none">
 </body>
 
 <template name="climbing">
@@ -21,7 +28,7 @@
     <p>Summits: {{summits}}</p>
     <p>Deaths: {{deaths}}</p>
     <div class="avatar" style="bottom: {{bottomPosition}}">
-      <img src="http://placekitten.com/50/50" height="50" width="50">
+      <img src="{{imagePath}}" width="166" height="298">
     </div>
   </div>
 </template>

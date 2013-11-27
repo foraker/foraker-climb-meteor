@@ -2,8 +2,10 @@
 body, html, div.container, .climber { height: 100%; }
 
 div.container {
-  width: 100%;
+  width: 1024px;
+  height: 976px;
   text-align: center;
+  background: url('/images/background.png');
 }
 
 div.container .climber {
@@ -16,11 +18,11 @@ div.container .climber p {
 }
 
 div.container .climber.derek {
-  background-color: blue;
+  /*background-color: blue;*/
 }
 
 div.container .climber.stirling {
-  background-color: red;
+  /*background-color: red;*/
 }
 
 div.container .climber .avatar {
