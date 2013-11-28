@@ -121,10 +121,12 @@ section {
   float: left;
   color: #991c20;
   position: relative;
+  height: 610px;
 }
 
 .avatar {
   position: absolute;
+  z-index: 999;
 }
 
 .details {
@@ -165,7 +167,6 @@ h5 {
 }
 
 .main {
-  overflow: hidden;
   height: 725px;
   display: block;
   position: relative;
@@ -175,7 +176,7 @@ h5 {
 }
 
 footer.bank {
-  height: 115px;
+  height: 118px;
   background-color: #fff;
   position: absolute;
   bottom: 0;

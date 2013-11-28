@@ -5,7 +5,10 @@ Template.climber.htmlClass = ->
   "brother #{@name.toLowerCase()}"
 
 Template.climber.bottomPosition = ->
-  "#{@height-5}%"
+  @base_bottom + @height
+
+Template.climber.leftPosition = ->
+  @base_left + (@height * 0.7 * @x_multipler)
 
 Template.climber.imagePath = ->
   climber    = Climbers.findOne({ _id: @_id })
