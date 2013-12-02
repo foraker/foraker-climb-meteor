@@ -33,7 +33,7 @@ Meteor.startup ->
 
   slide = Meteor.bindEnvironment ->
     # Increment death if about to die
-    Climbers.update({ height: SLIDE_INCREMENT }, $inc: { death_count: 1 }, { multi: true })
+    Climbers.update({ height: SLIDE_INCREMENT, resetting: false }, $inc: { death_count: 1 }, { multi: true })
     # Keep track of previous height
     Meteor.call('recordPreviousHeights')
     # Slide each climber down
