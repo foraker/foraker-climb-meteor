@@ -12,7 +12,9 @@ Meteor.startup ->
       charity: "Environment +",
       base_bottom: -30,
       base_left: 240,
-      x_multipler: -1 # move left
+      x_multipler: -1, # move left,
+      summitted: false,
+      resetting: false
     )
     Climbers.insert(
       name: 'Derek',
@@ -24,7 +26,9 @@ Meteor.startup ->
       charity: "Children's Hospital",
       base_bottom: -30,
       base_left: 161,
-      x_multipler: 1 # move right
+      x_multipler: 1, # move right
+      summitted: false,
+      resetting: false
     )
 
   slide = Meteor.bindEnvironment ->
@@ -33,7 +37,18 @@ Meteor.startup ->
     # Keep track of previous height
     Meteor.call('recordPreviousHeights')
     # Slide each climber down
-    Climbers.update({ height: { $gt: 0 } }, $inc: { height: -SLIDE_INCREMENT }, { multi: true })
+    Climbers.update(
+      { height: { $gt: 0 } },
+      $inc: { height: -SLIDE_INCREMENT },
+      { multi: true }
+    )
+    Climbers.update(
+      { resetting: true, height: { $gt: 0 } },
+      $inc: { height: -50 },
+      { multi: true }
+    )
+    Climbers.update({ height: { $lt: 0 } }, $set: { height: 0 }, { multi: true })
+    Climbers.update({}, $set: { summitted: false, resetting: false }, { multi: true }) if Climbers.find({ height: 0 }).fetch().length == 2
   , (e) ->
     console.log e
   setInterval(slide, 1000)

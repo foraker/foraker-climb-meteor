@@ -16,9 +16,15 @@ Template.climber.leftPosition = ->
 Template.climber.imagePath = ->
   climber    = Climbers.findOne({ _id: @_id })
   isClimbing = climber.previous_height < climber.height
+  isCheering = climber.summitted
   name       = climber.name.toLowerCase()
 
-  if isClimbing then "images/#{name}-climbing.gif" else "images/#{name}-falling.png"
+  postfix = switch
+    when isClimbing then 'climbing.gif'
+    when isCheering then 'cheering.gif'
+    else                 'falling.png'
+
+  "images/#{name}-#{postfix}"
 
 Template.climber.clickPercentage = ->
   total = _.reduce(
