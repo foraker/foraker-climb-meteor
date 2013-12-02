@@ -118,6 +118,10 @@ hgroup + p {
   text-decoration: none;
 }
 
+.charity-name a:hover {
+  text-decoration: underline;
+}
+
 section {
   overflow: hidden;
 }
@@ -197,12 +201,12 @@ footer button {
   padding: 10px 12px;
   position: absolute;
   bottom: 20px;
-  left: 10px;
+  right: 10px;
 }
 
 footer.bank img {
   position: absolute; bottom: 0;
-  right: 233px;
+  left: 100px;
 }
 
 button {
