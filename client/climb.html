@@ -1,5 +1,5 @@
 <head>
-  <title>foraker-climb-meteor</title>
+  <title>The Foraker Labs Climb Challenge</title>
   <link href='http://fonts.googleapis.com/css?family=Quicksand|Mr+De+Haviland' rel='stylesheet' />
 </head>
 
@@ -63,7 +63,9 @@
         <h4>for <span class="charity-name">{{charity}}</span></h4>
       </hgroup>
       <h5>% of rad support:</h5>
-      <p class="percent"><img src="/images/graph.jpg" /></p>
+      <p class="percent">
+        <canvas id="click-percentage-{{lowercaseName}}" data-percentage="{{clickPercentage}}" width="141" height="141"></canvas>
+      </p>
       <h5>Times face sent:</h5>
       <p class="faces">{{clicks}}</p>
       <h5>Total sick summits:</h5>
