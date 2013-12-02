@@ -201,12 +201,12 @@ footer button {
   padding: 10px 12px;
   position: absolute;
   bottom: 20px;
-  right: 10px;
+  left: 10px;
 }
 
 footer.bank img {
   position: absolute; bottom: 0;
-  left: 100px;
+  left: 35%;
 }
 
 button {
