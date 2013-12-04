@@ -181,7 +181,7 @@ h5 {
   display: block;
   position: relative;
   background: url(/images/peak.png) no-repeat center 75px;
-  width: 1200px;
+  width: 1142px;
   margin: 0 auto;
 }
 
@@ -288,7 +288,32 @@ h2:after {
 
 header hgroup { position: relative; z-index: 1; }
 
-canvas {
-  width: 141px;
-  height: 141px;
+.percent {
+  width: 142px;
+  height: 142px;
+}
+
+.pie {
+  position:absolute;
+  width:142px;
+  height:142px;
+  -moz-border-radius:71px;
+  -webkit-border-radius:71px;
+  border-radius:71px;
+  background-color: #707070;
+}
+
+.piece {
+  position:absolute;
+  background-color: red;
+  width:142px;
+  height:142px;
+  -moz-border-radius:71px;
+  -webkit-border-radius:71px;
+  border-radius:71px;
+  clip:rect(0px,142px,71px,71px);
+  -moz-transform:rotate(60deg);
+  -webkit-transform:rotate(60deg);
+  -o-transform:rotate(60deg);
+  transform:rotate(60deg);
 }

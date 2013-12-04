@@ -63,9 +63,10 @@
         <h4>for <div class="charity-name"><a href="{{charity_url}}" target="_blank">{{charity_name}}</a></div></h4>
       </hgroup>
       <h5>% of rad support:</h5>
-      <p class="percent">
-        <canvas id="click-percentage-{{lowercaseName}}" data-percentage="{{clickPercentage}}" width="141" height="141"></canvas>
-      </p>
+      <div class="percent">
+        <div class="pie"></div>
+        <div class="piece"></div>
+      </div>
       <h5>Times face sent:</h5>
       <p class="faces">{{clicks}}</p>
       <h5>Total sick summits:</h5>
