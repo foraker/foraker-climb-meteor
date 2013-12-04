@@ -1,35 +1,35 @@
 @keyframes animatedBackground {
   from { background-position: 0 0; }
-  to { background-position: 0 -100%; }
+  to { background-position: 0 100%; }
 }
 @-webkit-keyframes animatedBackground {
   from { background-position: 0 0; }
-  to { background-position: 0 -100%; }
+  to { background-position: 0 100%; }
 }
 @-ms-keyframes animatedBackground {
   from { background-position: 0 0; }
-  to { background-position: 0 -100%; }
+  to { background-position: 0 100%; }
 }
 @-moz-keyframes animatedBackground {
   from { background-position: 0 0; }
-  to { background-position: 0 -100%; }
+  to { background-position: 0 100%; }
 }
 
 @keyframes animatedBackgroundb{
-  from { background-position: -30px 20px; }
-  to { background-position: 15px -100%; }
+  from { background-position: -60px 10px; }
+  to { background-position: -60px 100%; }
 }
 @-webkit-keyframes animatedBackgroundb {
-  from { background-position: -30px 20px; }
-  to { background-position: 15px -100%; }
+  from { background-position: -60px 10px; }
+  to { background-position: -60px 100%; }
 }
 @-ms-keyframes animatedBackgroundb {
-  from { background-position: -30px 20px; }
-  to { background-position: 15px -100%; }
+  from { background-position: -60px 10px; }
+  to { background-position: -60px 100%; }
 }
 @-moz-keyframes animatedBackgroundb {
-  from { background-position: -30px 20px; }
-  to { background-position: 15px -100%; }
+  from { background-position: -60px 10px; }
+  to { background-position: -60px 100%; }
 }
 
 ::selection {
@@ -102,10 +102,10 @@ hgroup + p {
   background-repeat: repeat;
   position: relative;
 
-  animation: animatedBackgroundb 20s linear infinite;
-  -ms-animation: animatedBackgroundb 20s linear infinite;
-  -moz-animation: animatedBackgroundb 20s linear infinite;
-  -webkit-animation: animatedBackgroundb 20s linear infinite;
+  animation: animatedBackgroundb 15s linear infinite;
+  -ms-animation: animatedBackgroundb 15s linear infinite;
+  -moz-animation: animatedBackgroundb 15s linear infinite;
+  -webkit-animation: animatedBackgroundb 15s linear infinite;
 }
 
 .charity-name {
@@ -191,17 +191,6 @@ footer.bank {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-footer button {
-  color: #84191c;
-  background-color: #f2f2f2;
-  border-radius: 8px;
-  border: none;
-  padding: 10px 12px;
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
 }
 
 footer.bank img {
@@ -316,4 +305,38 @@ header hgroup { position: relative; z-index: 1; }
   -webkit-transform:rotate(60deg);
   -o-transform:rotate(60deg);
   transform:rotate(60deg);
+}
+
+footer a.terminology-modal {
+  color: #84191c;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 12px;
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  font-size: 12px;
+}
+
+#lean_overlay {
+  position: fixed;
+  z-index:100;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+  background: #000;
+  display: none;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 5px;
+  width: 600px;
+  padding: 10px;
+}
+
+.modal dd {
+  margin-bottom: 5px;
 }

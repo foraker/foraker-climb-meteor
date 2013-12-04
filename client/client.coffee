@@ -61,3 +61,6 @@ Template.climber.events(
   'click': ->
     Meteor.call('clickClimber', @_id)
 )
+
+Template.footer.rendered = ->
+  $('.terminology-modal').leanModal();

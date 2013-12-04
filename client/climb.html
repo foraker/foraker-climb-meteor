@@ -1,6 +1,7 @@
 <head>
   <title>The Foraker Labs Climb Challenge</title>
   <link href='http://fonts.googleapis.com/css?family=Quicksand|Mr+De+Haviland' rel='stylesheet' />
+  <link rel="shortcut icon" href="/favicon.png">
 </head>
 
 <body>
@@ -16,10 +17,7 @@
           <p>Welcome to the Foraker Lab's 2013 Holiday App. The brother with the most climbs to the top by December 20th, 2013 will get $1,000 to donate to the charity of his choice! So, click a brother to make him climb!</p>
         </header>
         {{> climbing}}
-        <footer class="bank">
-          <button title="Say what?!?">What's that mean?</button>
-          <a href="http://en.wikipedia.org/wiki/Mount_Foraker" target="_blank"><img src="/images/sign.png" alt="Mt. Foraker" /></a>
-        </footer>
+        {{> footer }}
       </div>
     </div>
   </div>
@@ -67,7 +65,7 @@
         <div class="pie"></div>
         <div class="piece"></div>
       </div>
-      <h5>Times face sent:</h5>
+      <h5>Number of boosts:</h5>
       <p class="faces">{{clicks}}</p>
       <h5>Total sick summits:</h5>
       <p class="sick">{{summit_count}}</p>
@@ -78,5 +76,42 @@
     <div class="avatar" style="bottom: {{bottomPosition}}px; left: {{leftPosition}}px">
       <img src="{{imagePath}}" width="166" height="298">
     </div>
+  </div>
+</template>
+
+<template name="footer">
+  <footer class="bank">
+    <p><a title="Say what?!?" href="#terminology-modal" class="terminology-modal">What's that mean?</a></p>
+    <a href="http://en.wikipedia.org/wiki/Mount_Foraker" target="_blank"><img src="/images/sign.png" alt="Mt. Foraker" /></a>
+  </footer>
+
+  <div id="terminology-modal" style="display: none" class="modal">
+    <h3>What's that mean?</h3>
+    <dl>
+      <dt>
+        % of rad support
+      </dt>
+      <dd>
+        This is the percentage of the total clicks this climber has received
+      </dd>
+      <dt>
+        Number of boosts
+      </dt>
+      <dd>
+        This is the number of times the climber was clicked
+      </dd>
+      <dt>
+        Total sick summits
+      </dt>
+      <dd>
+        This is the number of times the climber has summitted Mt Foraker
+      </dd>
+      <dt>
+        # of screamers
+      </dt>
+      <dd>
+        This is the number of times the climber has slid slowly, screaming to his death
+      </dd>
+    </dl>
   </div>
 </template>
