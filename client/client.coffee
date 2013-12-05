@@ -39,3 +39,8 @@ Template.climber.events(
   'click': ->
     Meteor.call('clickClimber', @_id)
 )
+
+$ ->
+  $('body').unicornblast(
+    start : 'konamiCode'
+  )
