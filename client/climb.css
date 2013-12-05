@@ -1,35 +1,35 @@
 @keyframes animatedBackground {
   from { background-position: 0 0; }
-  to { background-position: 0 -100%; }
+  to { background-position: 0 100%; }
 }
 @-webkit-keyframes animatedBackground {
   from { background-position: 0 0; }
-  to { background-position: 0 -100%; }
+  to { background-position: 0 100%; }
 }
 @-ms-keyframes animatedBackground {
   from { background-position: 0 0; }
-  to { background-position: 0 -100%; }
+  to { background-position: 0 100%; }
 }
 @-moz-keyframes animatedBackground {
   from { background-position: 0 0; }
-  to { background-position: 0 -100%; }
+  to { background-position: 0 100%; }
 }
 
 @keyframes animatedBackgroundb{
-  from { background-position: -30px 20px; }
-  to { background-position: 15px -100%; }
+  from { background-position: -60px 10px; }
+  to { background-position: -60px 100%; }
 }
 @-webkit-keyframes animatedBackgroundb {
-  from { background-position: -30px 20px; }
-  to { background-position: 15px -100%; }
+  from { background-position: -60px 10px; }
+  to { background-position: -60px 100%; }
 }
 @-ms-keyframes animatedBackgroundb {
-  from { background-position: -30px 20px; }
-  to { background-position: 15px -100%; }
+  from { background-position: -60px 10px; }
+  to { background-position: -60px 100%; }
 }
 @-moz-keyframes animatedBackgroundb {
-  from { background-position: -30px 20px; }
-  to { background-position: 15px -100%; }
+  from { background-position: -60px 10px; }
+  to { background-position: -60px 100%; }
 }
 
 ::selection {
@@ -102,10 +102,10 @@ hgroup + p {
   background-repeat: repeat;
   position: relative;
 
-  animation: animatedBackgroundb 20s linear infinite;
-  -ms-animation: animatedBackgroundb 20s linear infinite;
-  -moz-animation: animatedBackgroundb 20s linear infinite;
-  -webkit-animation: animatedBackgroundb 20s linear infinite;
+  animation: animatedBackgroundb 15s linear infinite;
+  -ms-animation: animatedBackgroundb 15s linear infinite;
+  -moz-animation: animatedBackgroundb 15s linear infinite;
+  -webkit-animation: animatedBackgroundb 15s linear infinite;
 }
 
 .charity-name {
