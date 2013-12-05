@@ -110,16 +110,11 @@ hgroup + p {
 
 .charity-name {
   display: block;
-  height: 2em;
+  height: 2.8em;
 }
 
 .charity-name a {
   color: #991c20;
-  text-decoration: none;
-}
-
-.charity-name a:hover {
-  text-decoration: underline;
 }
 
 section {
