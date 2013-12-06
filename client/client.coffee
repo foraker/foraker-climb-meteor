@@ -17,11 +17,13 @@ Template.climber.imagePath = ->
   climber    = Climbers.findOne({ _id: @_id })
   isClimbing = climber.previous_height < climber.height
   isCheering = climber.summitted
+  isDown     = climber.height == 0
   name       = climber.name.toLowerCase()
 
   postfix = switch
     when isClimbing then 'climbing.gif'
     when isCheering then 'cheering.gif'
+    when isDown     then 'down.png'
     else                 'falling.png'
 
   "images/#{name}-#{postfix}"
