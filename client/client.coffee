@@ -23,7 +23,7 @@ Template.climber.imagePath = ->
   postfix = switch
     when isClimbing then 'climbing.gif'
     when isCheering then 'cheering.gif'
-    when isDown     then 'down.png'
+    when isDown     then 'down.gif'
     else                 'falling.png'
 
   "images/#{name}-#{postfix}"
