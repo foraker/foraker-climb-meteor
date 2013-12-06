@@ -272,41 +272,19 @@ h2:after {
 
 header hgroup { position: relative; z-index: 1; }
 
-canvas {
-  width: 141px;
-  height: 141px;
+.col-half {
+  width: 50%;
+  float: left;
 }
 
-footer a.terminology-modal {
-  color: #84191c;
-  background-color: #f2f2f2;
-  border-radius: 8px;
-  border: none;
-  padding: 10px 12px;
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  font-size: 12px;
+.clear-left {
+  clear: left;
 }
 
-#lean_overlay {
-  position: fixed;
-  z-index:100;
-  top: 0px;
-  left: 0px;
-  height:100%;
-  width:100%;
-  background: #000;
-  display: none;
+.social iframe {
+  vertical-align: middle;
 }
 
-.modal {
-  background: #fff;
-  border-radius: 5px;
-  width: 600px;
-  padding: 10px;
-}
-
-.modal dd {
-  margin-bottom: 5px;
+.social .fb-share-button {
+  top: 1px;
 }
