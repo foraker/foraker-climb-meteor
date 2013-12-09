@@ -56,6 +56,7 @@ header {
 
 h1 {
   background: url(/images/title.png) no-repeat;
+  background-size: 289px 66px;
   width: 289px;
   height: 66px;
   margin: 0 auto;
