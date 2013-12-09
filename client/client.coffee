@@ -28,15 +28,6 @@ Template.climber.imagePath = ->
 
   "images/#{name}-#{postfix}"
 
-Template.climber.clickPercentage = ->
-  total = _.reduce(
-    Climbers.find().fetch(), (sum, climber) ->
-      sum + climber.clicks
-    , 0
-  )
-  percentage = if total > 0 then @clicks / total else 0
-  Math.round(percentage * 100)
-
 Template.climber.events(
   'click': ->
     Meteor.call('clickClimber', @_id)
