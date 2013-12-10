@@ -25,7 +25,9 @@
           <p><strong>Click a brother to make him climb!</strong></p>
         </header>
         {{> climbing}}
-        {{> footer }}
+        <footer class="bank">
+          <a href="http://en.wikipedia.org/wiki/Mount_Foraker" target="_blank"><img src="/images/sign.png" alt="Mt. Foraker" width="166" height="148"></a>
+        </footer>
       </div>
     </div>
   </div>
@@ -96,10 +98,4 @@
       <img src="{{imagePath}}" width="173" height="298">
     </div>
   </div>
-</template>
-
-<template name="footer">
-  <footer class="bank">
-    <a href="http://en.wikipedia.org/wiki/Mount_Foraker" target="_blank"><img src="/images/sign.png" alt="Mt. Foraker" width="166" height="148"></a>
-  </footer>
 </template>
