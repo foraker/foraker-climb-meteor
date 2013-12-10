@@ -32,6 +32,19 @@
   to { background-position: -60px 100%; }
 }
 
+@media (max-width: 600px) {
+  .details {
+    width: 100%;
+    color: #991c20;
+    height: 200px;
+  }
+
+  .details hgroup, .details .stat {
+    width: 300px;
+    float: left;
+  }
+}
+
 ::selection {
   background-color: transparent;
 }
@@ -157,10 +170,6 @@ section {
 .brother h4 {
   font-size: 18px;
 }
-
-/*hgroup + h5 {
-  margin-top: 25px;
-}*/
 
 h5 {
   color: #707070;
