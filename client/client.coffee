@@ -31,6 +31,8 @@ Template.climber.imagePath = ->
 Template.climber.events(
   'click': ->
     Meteor.call('clickClimber', @_id)
+  'touchstart': ->
+    Meteor.call('clickClimber', @_id)
 )
 
 $ ->
