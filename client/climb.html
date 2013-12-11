@@ -9,6 +9,30 @@
   <meta property="og:description" content="Choose one of the brothers that lead Foraker Labs climb to the top of a mountain. The winner gets $1000 donated to the charity of his choosing.">
   <meta property="fb:app_id" content="395236680607796">
   <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script>
+    $(document).ready(function(){
+
+      footerStuff();
+
+      $(window).resize( function() {
+        footerStuff();
+      });
+
+      function footerStuff() {
+        wH = $(window).height();
+        mH = $(".wrapper").height();
+
+        if(wH > mH) {
+          f = $(".footer").position();
+          fH = $(".footer").height();
+          $(".footer").height((wH-f.top));
+        } else {
+          $(".footer").height("auto");
+        }
+      }
+
+    });
+  </script>
 </head>
 
 <body>
@@ -28,34 +52,34 @@
 
 
   </div>
-  <footer>
-    <div class="col-half">
-      <p>
-        <a href="http://www.foraker.com" title="Visit Foraker Labs. We won't bite." target="_blank"><img src="/images/logo-foraker.png" width="241" height="36" alt="Foraker Labs" /></a>
-      </p>
-    </div>
-    <div class="col-half social">
-      <p>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://holiday2013.foraker.com" data-text="Come play the Foraker Labs Holiday Climb Challenge with me!" data-via="foraker" data-count="none">Tweet</a>
-        <span id="fb-root"></span>
-        <span class="fb-share-button" data-href="http://holiday2013.foraker.com" data-type="button"></span>
-      </p>
-    </div>
-    <div class="col-half clear-left">
-      <p>
-        Stirling and Derek Olson are the brothers behind the magic of Foraker Labs. Stirling is our
-        fantastic CEO and his younger brother, Derek, stands strong as VP. Together they continually
-        conquer the challenges of web application software.
-      </p>
-    </div>
+  <footer class="footer">
+    <div class="row"><div class="col-half">
+          <p>
+            <a href="http://www.foraker.com" title="Visit Foraker Labs. We won't bite." target="_blank"><img src="/images/logo-foraker.png" width="241" height="36" alt="Foraker Labs" /></a>
+          </p>
+        </div>
+        <div class="col-half social">
+          <p>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://holiday2013.foraker.com" data-text="Come play the Foraker Labs Holiday Climb Challenge with me!" data-via="foraker" data-count="none">Tweet</a>
+            <span id="fb-root"></span>
+            <span class="fb-share-button" data-href="http://holiday2013.foraker.com" data-type="button"></span>
+          </p>
+        </div></div>
+   <div class="row"> <div class="col-half clear-left">
+         <p>
+           Stirling and Derek Olson are the brothers behind the magic of Foraker Labs. Stirling is our
+           fantastic CEO and his younger brother, Derek, stands strong as VP. Together they continually
+           conquer the challenges of web application software.
+         </p>
+       </div>
 
-    <div class="col-half">
-      <p>
-        <a href="#">Curious about how we made this simple app?</a><br />
-        <a href="http://www.foraker.com/" target="_blank">Want to learn more about Foraker Labs?</a><br />
-        <a href="http://www.foraker.com/careers/" target="_blank">Want to come work on neat stuff like this?</a>
-      </p>
-    </div>
+       <div class="col-half">
+         <ul>
+           <li><a href="#">Curious about how we made this simple app?</a></li>
+           <li><a href="http://www.foraker.com/" target="_blank">Want to learn more about Foraker Labs?</a></li>
+           <li><a href="http://www.foraker.com/careers/" target="_blank">Want to come work on neat stuff like this?</a></li>
+         </ul>
+       </div></div>
   </footer>
 
   <!-- eager load images -->

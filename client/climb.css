@@ -1,21 +1,63 @@
-@keyframes snow{
-  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
-  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+
+
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
-@-webkit-keyframes snow{
-  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
-  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+
+body {
+    line-height:1;
 }
-@-ms-keyframes snow{
-  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
-  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
-}
-@-moz-keyframes snow{
-  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
-  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
 }
 
 
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+p {
+  margin: 10px;
+}
+ul {
+  margin: 10px 10px 0 45px;
+}
+li {
+  padding-bottom: 10px;
+}
 body {
   margin: 0;
   padding: 0;
@@ -45,6 +87,10 @@ header hgroup {
   position: relative;
   z-index: 1;
 }
+header p,
+.footer p {
+  line-height: 1.3em;
+}
 
 h1 {
   background: url(/images/title.png) no-repeat;
@@ -69,6 +115,7 @@ h2 {
 
 .wrapper {
   padding-top: 20px;
+  position: relative;
 }
 
 .charity-name {
@@ -128,10 +175,6 @@ section {
   font-size: 18px;
 }
 
-/*hgroup + h5 {
-  margin-top: 25px;
-}*/
-
 h5 {
   color: #707070;
   font-size: 18px;
@@ -173,7 +216,6 @@ footer {
   margin: 0;
 }
 footer p {
-  width: 650px;
   color: #fff;
   font-size: 18px;
   margin-left: 30px;
@@ -261,4 +303,22 @@ h2:after {
 
 .social .fb-share-button {
   top: 1px;
+}
+
+
+@keyframes snow{
+  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
+  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+}
+@-webkit-keyframes snow{
+  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
+  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+}
+@-ms-keyframes snow{
+  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
+  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+}
+@-moz-keyframes snow{
+  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
+  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
 }
