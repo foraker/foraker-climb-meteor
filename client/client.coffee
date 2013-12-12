@@ -41,23 +41,3 @@ $ ->
   $('body').unicornblast(
     start : 'konamiCode'
   )
-
-  sizeFooter = ->
-    windowHeight  = $(window).height()
-    wrapperHeight = $(".wrapper").height()
-
-    if (wrapperHeight > windowHeight)
-      $(".footer").height("auto")
-    else
-      footerPosition = $(".footer").position()
-      footerOffset = windowHeight-footerPosition.top
-      if (wrapperHeight + footerOffset) > windowHeight
-        $(".footer").height("auto")
-      else
-        $(".footer").height(footerOffset)
-
-  sizeFooter()
-
-  $(window).resize ->
-    sizeFooter()
-
