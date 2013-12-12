@@ -14,8 +14,8 @@
 		return this.each(function() {
 			var animationRunning = false;
 			var audioSupported = false;
-			var content = '<img id="bigRainbow" style="display: none" src="/images/rainbow.gif" />';
-			content += '<img id="flyingUnicorn0" class="flyingUnicorn" style="display: none" src="/images/flyingUnicorn0.gif" />';
+			var content = '<img id="bigRainbow" style="display: none" src="/images/rainbow.png" />';
+			content += '<img id="flyingUnicorn0" class="flyingUnicorn" style="display: none" src="/images/flyingUnicorn0.png" />';
 			content += '<img id="flyingUnicorn1" class="flyingUnicorn" style="display: none" src="/images/derek-cheering.gif" />';
 			content += '<img id="flyingUnicorn2" class="flyingUnicorn" style="display: none" src="/images/stirling-cheering.gif" />';
 			content += '<img id="flyingUnicorn3" class="flyingUnicorn" style="display: none" src="/images/flyingUnicorn3.gif" />';

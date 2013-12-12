@@ -8,59 +8,79 @@
   <meta property="og:url" content="http://holiday2013.foraker.com">
   <meta property="og:description" content="Choose one of the brothers that lead Foraker Labs climb to the top of a mountain. The winner gets $1000 donated to the charity of his choosing.">
   <meta property="fb:app_id" content="395236680607796">
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 
 <body>
+<div class="full">
   <div class="wrapper">
-    <div class="inner">
-      <div class="inner2">
-        <header>
-          <hgroup>
-            <h1><span>Foraker Labs</span></h1>
-             <h2 class="ribbon"><span class="ribbon-content">Climb Challenge</span></h2>
-          </hgroup>
+    <header>
+      <hgroup>
+        <h1><span>Foraker Labs</span></h1>
+         <h2 class="ribbon"><span class="ribbon-content">Climb Challenge</span></h2>
+      </hgroup>
 
-          <p>Welcome to the Foraker Lab's 2013 Holiday App. The brother with the most summits by December 20th, 2013 at 4pm MT will get $1,000 to donate to the charity of his choice!
-          </p>
-          <p><strong>Click a brother to make him climb!</strong></p>
-        </header>
-        {{> climbing}}
-        <footer class="bank">
-          <a href="http://en.wikipedia.org/wiki/Mount_Foraker" target="_blank"><img src="/images/sign.png" alt="Mt. Foraker" width="166" height="148"></a>
-        </footer>
+      <div>
+        <p>
+          Welcome to the Foraker Lab's 2013 Holiday App. The brother with the most summits by December 20th, 2013 at 4pm MT will get $1,000 to donate to the charity of his choice!
+        </p>
+        <p><strong>Click a brother to make him climb!</strong></p>
+      </div>
+    </header>
+    <div class="main">
+      {{> climbing}}
+    </div>
+    <footer class="bank">
+      <a href="http://en.wikipedia.org/wiki/Mount_Foraker" target="_blank"><img src="/images/sign.png" alt="Mt. Foraker" width="166" height="148"></a>
+    </footer>
+  </div>
+  <footer class="footer">
+    <div class="row">
+      <div class="col-half">
+        <p>
+          <a href="http://www.foraker.com" title="Visit Foraker Labs. We won't bite." target="_blank"><img src="/images/logo-foraker.png" width="241" height="36" alt="Foraker Labs" /></a>
+        </p>
+      </div>
+      <div class="col-half social">
+        <p>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://holiday2013.foraker.com" data-text="Come play the Foraker Labs Holiday Climb Challenge with me!" data-via="foraker" data-count="none">Tweet</a>
+          <span id="fb-root"></span>
+          <span class="fb-share-button" data-href="http://holiday2013.foraker.com" data-type="button"></span>
+        </p>
       </div>
     </div>
-  </div>
-  <footer>
-    <div class="col-half">
-      <p>
-        <a href="http://www.foraker.com" title="Visit Foraker Labs. We won't bite." target="_blank"><img src="/images/logo-foraker.png" width="241" height="36" alt="Foraker Labs" /></a>
-      </p>
-    </div>
-    <div class="col-half social">
-      <p>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://holiday2013.foraker.com" data-text="Come play the Foraker Labs Holiday Climb Challenge with me!" data-via="foraker" data-count="none">Tweet</a>
-        <span id="fb-root"></span>
-        <span class="fb-share-button" data-href="http://holiday2013.foraker.com" data-type="button"></span>
-      </p>
-    </div>
-    <div class="col-half clear-left">
-      <p>
-        Stirling and Derek Olson are the brothers behind the magic of Foraker Labs. Stirling is our
-        fantastic CEO and his younger brother, Derek, stands strong as VP. Together they continually
-        conquer the challenges of web application software.
-      </p>
-    </div>
+    <div class="row">
+      <div class="col-half clear-left">
+        <p>
+          Stirling and Derek Olson are the brothers behind the magic of Foraker Labs. Stirling is our
+          fantastic CEO and his younger brother, Derek, stands strong as VP. Together they continually
+          conquer the challenges of web application software.
+        </p>
+      </div>
 
-    <div class="col-half">
-      <p>
-        <a href="#">Curious about how we made this simple app?</a><br />
-        <a href="http://www.foraker.com/" target="_blank">Want to learn more about Foraker Labs?</a><br />
-        <a href="http://www.foraker.com/careers/" target="_blank">Want to come work on neat stuff like this?</a>
-      </p>
+      <div class="col-half">
+        <ul>
+          <li><a href="#">Curious about how we made this simple app?</a></li>
+          <li><a href="http://www.foraker.com/" target="_blank">Want to learn more about Foraker Labs?</a></li>
+          <li><a href="http://www.foraker.com/careers/" target="_blank">Want to come work on neat stuff like this?</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
+</div>
 
+<div class="sorry">
+  <div class="wrapper">
+    <header>
+      <hgroup>
+        <h1><span>Foraker Labs</span></h1>
+         <h2 class="ribbon"><span class="ribbon-content">Climb Challenge</span></h2>
+      </hgroup>
+
+      <p>Whoops! We only built this application for larger screens. Please come join the fun on a desktop or tablet.</p>
+    </header>
+  </div>
+</div>
   <!-- eager load images -->
   <img src="/images/derek-falling.png" style="display: none">
   <img src="/images/stirling-falling.png" style="display: none">
@@ -72,11 +92,9 @@
 </body>
 
 <template name="climbing">
-  <div class="main">
-     {{#each climbers}}
-      {{> climber}}
-    {{/each}}
-  </div>
+  {{#each climbers}}
+    {{> climber}}
+  {{/each}}
 </template>
 
 <template name="climber">

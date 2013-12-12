@@ -1,47 +1,74 @@
-@keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 0 100%; }
-}
-@-webkit-keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 0 100%; }
-}
-@-ms-keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 0 100%; }
-}
-@-moz-keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 0 100%; }
-}
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
 
-@keyframes animatedBackgroundb{
-  from { background-position: -60px 10px; }
-  to { background-position: -60px 100%; }
-}
-@-webkit-keyframes animatedBackgroundb {
-  from { background-position: -60px 10px; }
-  to { background-position: -60px 100%; }
-}
-@-ms-keyframes animatedBackgroundb {
-  from { background-position: -60px 10px; }
-  to { background-position: -60px 100%; }
-}
-@-moz-keyframes animatedBackgroundb {
-  from { background-position: -60px 10px; }
-  to { background-position: -60px 100%; }
-}
-
-::selection {
-  background-color: transparent;
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
 
 body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+p {
+  margin: 10px;
+}
+ul {
+  margin: 10px 10px 0 45px;
+}
+li {
+  padding-bottom: 10px;
+}
+body {
   margin: 0;
-  padding: 0 0 30px 0;
-  background-color: #363026;
+  padding: 0;
+  position: relative;
   color: #707070;
   font-family: 'Quicksand', sans-serif;
+  background-color: #c6c6c6;
+  background-image: url(/images/snow-b-1.png), url(/images/snow-b-2.png), url(/images/snow-b-3.png);
+  background-repeat: repeat;
+
+  animation: snow 15s linear infinite;
+  -ms-animation: snow 15s linear infinite;
+  -moz-animation: snow 15s linear infinite;
+  -webkit-animation: snow 5s linear infinite;
 }
 
 h1,h2,h3,h4,h5 {
@@ -49,9 +76,17 @@ h1,h2,h3,h4,h5 {
 }
 
 header {
-  width: 558px;
+  width: 585px;
   margin: 0 auto;
   text-align: center;
+}
+header hgroup {
+  position: relative;
+  z-index: 1;
+}
+header p,
+.footer p {
+  line-height: 1.3em;
 }
 
 h1 {
@@ -76,33 +111,8 @@ h2 {
 }
 
 .wrapper {
-  background-color: #c6c6c6;
-  background-image: -webkit-radial-gradient(center center, ellipse cover, #e9e9e9, #c6c6c6 );
   padding-top: 20px;
-}
-
-/* Let it snow */
-.inner {
-  background-image: url(/images/snow.png);
-  background-position: 0px 0px;
-  background-repeat: repeat;
-
-  animation: animatedBackground 10s linear infinite;
-  -ms-animation: animatedBackground 10s linear infinite;
-  -moz-animation: animatedBackground 10s linear infinite;
-  -webkit-animation: animatedBackground 10s linear infinite;
-}
-
-.inner2 {
-  background-image: url(/images/snow.png);
-  background-position: -30px 20px;
-  background-repeat: repeat;
   position: relative;
-
-  animation: animatedBackgroundb 15s linear infinite;
-  -ms-animation: animatedBackgroundb 15s linear infinite;
-  -moz-animation: animatedBackgroundb 15s linear infinite;
-  -webkit-animation: animatedBackgroundb 15s linear infinite;
 }
 
 .charity-name {
@@ -124,6 +134,10 @@ section {
   color: #991c20;
   position: relative;
   height: 610px;
+}
+
+.brother ::selection {
+  background-color: transparent;
 }
 
 .avatar {
@@ -158,10 +172,6 @@ section {
   font-size: 18px;
 }
 
-/*hgroup + h5 {
-  margin-top: 25px;
-}*/
-
 h5 {
   color: #707070;
   font-size: 18px;
@@ -173,8 +183,8 @@ h5 {
   display: block;
   position: relative;
   background: url(/images/peak.png) no-repeat center 75px;
-  width: 1200px;
   margin: 0 auto;
+  max-width:1220px;
 }
 
 footer.bank {
@@ -183,6 +193,7 @@ footer.bank {
   position: absolute;
   bottom: 0;
   width: 100%;
+  overflow: visible;
 }
 
 footer.bank img {
@@ -194,9 +205,14 @@ button {
   outline: none;
   cursor: pointer;
 }
-
+footer {
+  background-color: #363026;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
 footer p {
-  width: 650px;
   color: #fff;
   font-size: 18px;
   margin-left: 30px;
@@ -267,7 +283,7 @@ h2:after {
   background-position: -111px 3px;
 }
 
-header hgroup { position: relative; z-index: 1; }
+
 
 .col-half {
   width: 50%;
@@ -284,4 +300,62 @@ header hgroup { position: relative; z-index: 1; }
 
 .social .fb-share-button {
   top: 1px;
+}
+
+.sorry {
+  display: none;
+}
+@keyframes snow{
+  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
+  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+}
+@-webkit-keyframes snow{
+  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
+  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+}
+@-ms-keyframes snow{
+  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
+  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+}
+@-moz-keyframes snow{
+  from { background-position: 0px 0px, 0px 0px, 0px 0px; }
+  to { background-position: 500px 1000px, 400px 400px, 300px 300px; }
+}
+
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+  .full {
+    display: none;
+  }
+  .sorry {
+    display: block;
+  }
+  .sorry header {
+    width: 88%;
+  }
+  .sorry header h2 {
+    width: 89%;
+    font-size: 28px !important;
+  }
+  .sorry header p {
+    background-color: orange;
+    border-radius: 5px;
+    border: 6px solid #fff;
+    width: 482px;
+    height: 60px;
+    font-size: 16px;
+    position: relative;
+  }
+  header p:after {
+    width: 474px;
+    height: 52px;
+    content: '';
+    border: 4px solid purple;
+    position: absolute;
+  }
+  .sorry .inner {
+    width: 500px;
+  }
 }

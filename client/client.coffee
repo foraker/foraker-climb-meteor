@@ -11,7 +11,9 @@ Template.climber.bottomPosition = ->
   @base_bottom + @height
 
 Template.climber.leftPosition = ->
-  @base_left + (@height * 0.7 * @x_multipler)
+  # Hack to keep Derek on the mountain if window's not max width
+  negative_offset = if @name == 'Derek' then (1220 - $('.main').width())/2 else 0
+  @base_left + (@height * 0.7 * @x_multipler) - negative_offset
 
 Template.climber.imagePath = ->
   climber    = Climbers.findOne({ _id: @_id })
@@ -31,9 +33,31 @@ Template.climber.imagePath = ->
 Template.climber.events(
   'click': ->
     Meteor.call('clickClimber', @_id)
+  'touchstart': ->
+    Meteor.call('clickClimber', @_id)
 )
 
 $ ->
   $('body').unicornblast(
     start : 'konamiCode'
   )
+
+  sizeFooter = ->
+    windowHeight  = $(window).height()
+    wrapperHeight = $(".wrapper").height()
+
+    if (wrapperHeight > windowHeight)
+      $(".footer").height("auto")
+    else
+      footerPosition = $(".footer").position()
+      footerOffset = windowHeight-footerPosition.top
+      if (wrapperHeight + footerOffset) > windowHeight
+        $(".footer").height("auto")
+      else
+        $(".footer").height(footerOffset)
+
+  sizeFooter()
+
+  $(window).resize ->
+    sizeFooter()
+
