@@ -15,7 +15,6 @@ Template.climber.leftPosition = ->
   negative_offset = if @name == 'Derek' then (1220 - $('.main').width())/2 else 0
   @base_left + (@height * 0.7 * @x_multipler) - negative_offset
 
-
 Template.climber.imagePath = ->
   climber    = Climbers.findOne({ _id: @_id })
   isClimbing = climber.previous_height < climber.height
@@ -42,3 +41,23 @@ $ ->
   $('body').unicornblast(
     start : 'konamiCode'
   )
+
+  sizeFooter = ->
+    windowHeight  = $(window).height()
+    wrapperHeight = $(".wrapper").height()
+
+    if (wrapperHeight > windowHeight)
+      $(".footer").height("auto")
+    else
+      footerPosition = $(".footer").position()
+      footerOffset = windowHeight-footerPosition.top
+      if (wrapperHeight + footerOffset) > windowHeight
+        $(".footer").height("auto")
+      else
+        $(".footer").height(footerOffset)
+
+  sizeFooter()
+
+  $(window).resize ->
+    sizeFooter()
+

@@ -9,34 +9,6 @@
   <meta property="og:description" content="Choose one of the brothers that lead Foraker Labs climb to the top of a mountain. The winner gets $1000 donated to the charity of his choosing.">
   <meta property="fb:app_id" content="395236680607796">
   <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <script>
-    $(document).ready(function(){
-
-      footerStuff();
-
-      $(window).resize( function() {
-        footerStuff();
-      });
-
-      function footerStuff() {
-        wH = $(window).height();
-        mH = $(".wrapper").height();
-
-        if(mH > wH) {
-          $(".footer").height("auto");
-        } else {
-          f = $(".footer").position();
-          fH = $(".footer").height();
-          nFH = wH-f.top;
-          if((mH + nFH) > wH)
-            $(".footer").height("auto");
-          else
-            $(".footer").height(nFH);
-        }
-      }
-
-    });
-  </script>
 </head>
 
 <body>
