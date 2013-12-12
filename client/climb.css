@@ -112,7 +112,7 @@ h2 {
   animation: snow 15s linear infinite;
   -ms-animation: snow 15s linear infinite;
   -moz-animation: snow 15s linear infinite;
-  -webkit-animation: snow 5s linear infinite;
+  -webkit-animation: snow 15s linear infinite;
   min-width: 1100px;
 }
 
@@ -244,6 +244,10 @@ h2 {
   text-align: center;
   padding: 11px 0; /* Adjust to suit */
   margin: 0  auto; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+h2 span {
+  font-weight: normal;
+  text-shadow: 1px 1px 0 #238991;
 }
 
 h2:before, h2:after {
