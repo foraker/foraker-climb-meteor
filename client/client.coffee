@@ -11,7 +11,10 @@ Template.climber.bottomPosition = ->
   @base_bottom + @height
 
 Template.climber.leftPosition = ->
-  @base_left + (@height * 0.7 * @x_multipler)
+  # Hack to keep Derek on the mountain if window's not max width
+  negative_offset = if @name == 'Derek' then (1220 - $('.main').width())/2 else 0
+  @base_left + (@height * 0.7 * @x_multipler) - negative_offset
+
 
 Template.climber.imagePath = ->
   climber    = Climbers.findOne({ _id: @_id })

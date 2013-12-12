@@ -43,19 +43,20 @@
 <div class="full">
   <div class="wrapper">
 
-        <header>
-          <hgroup>
-            <h1><span>Foraker Labs</span></h1>
-             <h2 class="ribbon"><span class="ribbon-content">Climb Challenge</span></h2>
-          </hgroup>
+    <header>
+      <hgroup>
+        <h1><span>Foraker Labs</span></h1>
+         <h2 class="ribbon"><span class="ribbon-content">Climb Challenge</span></h2>
+      </hgroup>
 
-          <div><p>Welcome to the Foraker Lab's 2013 Holiday App. The brother with the most summits by December 20th, 2013 at 4pm MT will get $1,000 to donate to the charity of his choice!
-                    </p>
-                    <p><strong>Click a brother to make him climb!</strong></p></div>
-        </header>
-        {{> climbing}}
-
-
+      <div><p>Welcome to the Foraker Lab's 2013 Holiday App. The brother with the most summits by December 20th, 2013 at 4pm MT will get $1,000 to donate to the charity of his choice!
+                </p>
+                <p><strong>Click a brother to make him climb!</strong></p></div>
+    </header>
+    <div class="main">
+      {{> climbing}}
+    </div>
+    {{> footer }}
   </div>
   <footer class="footer">
     <div class="row"><div class="col-half">
@@ -111,13 +112,9 @@
 </body>
 
 <template name="climbing">
-  <div class="main">
-     {{#each climbers}}
-      {{> climber}}
-    {{/each}}
-
-  </div>
-  {{> footer}}
+  {{#each climbers}}
+    {{> climber}}
+  {{/each}}
 </template>
 
 <template name="climber">
