@@ -26,7 +26,9 @@ time, mark, audio, video {
     vertical-align:baseline;
     background:transparent;
 }
-
+html {
+  -webkit-text-size-adjust: none;
+}
 body {
     line-height:1;
 }
@@ -215,10 +217,11 @@ footer {
   position: relative;
   overflow: hidden;
   margin: 0;
+  font-size: .75em;
 }
 footer p {
   color: #fff;
-  font-size: 18px;
+  /*font-size: 18px;*/
   margin-left: 30px;
 }
 
@@ -371,14 +374,34 @@ and (max-device-width : 568px) {
   figure img {
     width: 100%;
   }
-/*  .footer {
-    font-size: .8em;
-  }*/
+.sorry .footer {
+  /*font-size: 14px;*/
+}
   .footer p,
-  .sorry .footer li a {
-    font-size: 14px !important;
+  .footer ul li a {
+    font-size: 14px;
   }
   .snow {
     min-width: 320px;
   }
+  h2:before, h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 10px;
+  border: 15px solid #26939c;
+  z-index: -1;
+}
+
+h2:before {
+  left: -25px;
+  border-right-width: 20px;
+  border-left-color: transparent;
+}
+
+h2:after {
+  right: -25px;
+  border-left-width: 20px;
+  border-right-color: transparent;
+}
 }
