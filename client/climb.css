@@ -26,7 +26,9 @@ time, mark, audio, video {
     vertical-align:baseline;
     background:transparent;
 }
-
+html {
+  -webkit-text-size-adjust: none;
+}
 body {
     line-height:1;
 }
@@ -60,15 +62,8 @@ body {
   padding: 0;
   position: relative;
   color: #707070;
+  background-color: #363026;
   font-family: 'Quicksand', sans-serif;
-  background-color: #c6c6c6;
-  background-image: url(/images/snow-b-1.png), url(/images/snow-b-2.png), url(/images/snow-b-3.png);
-  background-repeat: repeat;
-
-  animation: snow 15s linear infinite;
-  -ms-animation: snow 15s linear infinite;
-  -moz-animation: snow 15s linear infinite;
-  -webkit-animation: snow 5s linear infinite;
 }
 
 h1,h2,h3,h4,h5 {
@@ -108,6 +103,17 @@ h2 {
   background-color: #2eb2bd;
   color: #fff;
   font-size: 42px;
+}
+
+.snow {
+  background-color: #c6c6c6;
+  background-image: url(/images/snow-b-1.png), url(/images/snow-b-2.png), url(/images/snow-b-3.png);
+  background-repeat: repeat;
+  animation: snow 15s linear infinite;
+  -ms-animation: snow 15s linear infinite;
+  -moz-animation: snow 15s linear infinite;
+  -webkit-animation: snow 5s linear infinite;
+  min-width: 1100px;
 }
 
 .wrapper {
@@ -211,10 +217,11 @@ footer {
   position: relative;
   overflow: hidden;
   margin: 0;
+  font-size: .75em;
 }
 footer p {
   color: #fff;
-  font-size: 18px;
+  /*font-size: 18px;*/
   margin-left: 30px;
 }
 
@@ -332,30 +339,69 @@ and (max-device-width : 568px) {
   .sorry {
     display: block;
   }
-  .sorry header {
+  header {
     width: 88%;
   }
-  .sorry header h2 {
+  h1 {
+    width: 257px;
+    height: 58px;
+    background-size: 257px 58px;
+  }
+  header h2 {
     width: 89%;
     font-size: 28px !important;
   }
-  .sorry header p {
-    background-color: orange;
+  /*.sorry header .msg*/
+  .msg {
     border-radius: 5px;
-    border: 6px solid #fff;
-    width: 482px;
-    height: 60px;
-    font-size: 16px;
-    position: relative;
+    background-color: #fff;
+    padding: 3px;
+    margin-top: 10px;
   }
-  header p:after {
-    width: 474px;
-    height: 52px;
-    content: '';
-    border: 4px solid purple;
-    position: absolute;
+  /*.sorry header p*/
+  .msg p {
+    border-radius: 5px;
+    border: 4px solid #dcdcdc;
+    padding: 10px 20px;
   }
-  .sorry .inner {
-    width: 500px;
+  .bros {
+    background: url(../images/mobile-snow.jpg) 0 bottom repeat-x;
   }
+  figure {
+    width: 88%;
+    margin: 0 auto;
+  }
+  figure img {
+    width: 100%;
+  }
+.sorry .footer {
+  /*font-size: 14px;*/
+}
+  .footer p,
+  .footer ul li a {
+    font-size: 14px;
+  }
+  .snow {
+    min-width: 320px;
+  }
+  h2:before, h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 10px;
+  border: 15px solid #26939c;
+  z-index: -1;
+}
+
+h2:before {
+  left: -25px;
+  border-right-width: 20px;
+  border-left-color: transparent;
+}
+
+h2:after {
+  right: -25px;
+  border-left-width: 20px;
+  border-right-color: transparent;
+}
 }
