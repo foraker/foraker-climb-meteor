@@ -1,0 +1,39 @@
+{
+  "format": "unipackage-slice-pre1",
+  "packageVariables": [
+    {
+      "name": "headers",
+      "export": true
+    }
+  ],
+  "uses": [
+    {
+      "package": "meteor"
+    },
+    {
+      "package": "webapp"
+    },
+    {
+      "package": "livedata"
+    },
+    {
+      "package": "templating"
+    },
+    {
+      "package": "deps"
+    },
+    {
+      "package": "standard-app-packages"
+    }
+  ],
+  "resources": [
+    {
+      "type": "prelink",
+      "file": "browser/packages/meteor-headers.js",
+      "length": 8191,
+      "offset": 0,
+      "servePath": "/packages/meteor-headers.js",
+      "sourceMap": "browser/packages/meteor-headers.js.map"
+    }
+  ]
+}
