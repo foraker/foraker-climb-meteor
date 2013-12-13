@@ -15,6 +15,6 @@ Meteor.methods(
       Climbers.update({_id: climber._id}, $set: { previous_height: climber.height } )
   ,
   handleSummit: ->
-    Climbers.update({ height: MAX_HEIGHT }, { $inc: { summit_count: 1 }, $set: { summitted: true } }, { multi: true })
+    Climbers.update({ height: MAX_HEIGHT, summitted: false }, { $inc: { summit_count: 1 }, $set: { summitted: true } }, { multi: true })
     Climbers.update({}, $set: { resetting: true }, { multi: true })
 )
