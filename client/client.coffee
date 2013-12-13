@@ -33,8 +33,7 @@ Template.climber.imagePath = ->
 Template.climber.events(
   'click': (e) ->
     Session.set('clicks', (Session.get('clicks') || 0) + 1)
-    console.log Session.get('clicks')
-    if Session.get('clicks') > 100
+    if Session.get('clicks') > 200
       alert 'You are clicking too fast. I apologize, but you need to wait a moment or two.'
     else
       Meteor.call('clickClimber', @_id) if e.x > 0 or e.clientX > 0
