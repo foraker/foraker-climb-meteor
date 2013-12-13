@@ -32,7 +32,12 @@ Template.climber.imagePath = ->
 
 Template.climber.events(
   'click': (e) ->
-    Meteor.call('clickClimber', @_id) if e.x > 0 or e.clientX > 0
+    Session.set('clicks', (Session.get('clicks') || 0) + 1)
+    console.log Session.get('clicks')
+    if Session.get('clicks') > 100
+      alert 'You are clicking too fast. I apologize, but you need to wait a moment or two.'
+    else
+      Meteor.call('clickClimber', @_id) if e.x > 0 or e.clientX > 0
   'touchstart': ->
     Meteor.call('clickClimber', @_id)
 )
@@ -41,3 +46,8 @@ $ ->
   $('body').unicornblast(
     start : 'konamiCode'
   )
+
+  setInterval(->
+    Session.set('clicks', 0)
+  ,
+  30000)
