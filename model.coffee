@@ -9,7 +9,7 @@ Meteor.methods(
     unless climber.resetting or _.contains(BANNED_IPS, clientIp)
       Meteor.call('recordPreviousHeights')
       Climbers.update({ _id: _id }, { $inc: { clicks: 1 } })
-      Climbers.update({ _id: _id, height: { $lt: MAX_HEIGHT } }, { $inc: { height: 2 } })
+      Climbers.update({ _id: _id, height: { $lt: MAX_HEIGHT } }, { $inc: { height: 4 } })
       Meteor.call('handleSummit') if Climbers.find({ height: MAX_HEIGHT }).fetch().length > 0
   ,
   recordPreviousHeights: ->
