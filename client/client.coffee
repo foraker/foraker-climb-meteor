@@ -12,7 +12,7 @@ Template.climber.bottomPosition = ->
 
 Template.climber.leftPosition = ->
   # Hack to keep Derek on the mountain if window's not max width
-  negative_offset = if @name == 'Derek' then (1150 - $('.main').width())/2 else 0
+  negative_offset = if @name == 'Derek' then (1190 - $('.main').width())/2 else 0
   @base_left + (@height * 0.7 * @x_multipler) - negative_offset
 
 Template.climber.imagePath = ->
