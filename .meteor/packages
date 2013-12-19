@@ -7,4 +7,3 @@ standard-app-packages
 autopublish
 preserve-inputs
 coffeescript
-meteor-headers

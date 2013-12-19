@@ -4,9 +4,8 @@ BANNED_IPS = ['173.164.61.149']
 
 Meteor.methods(
   clickClimber: (_id) ->
-    clientIp = headers.getClientIP(@)
     climber = Climbers.findOne({ _id: _id })
-    unless climber.resetting or _.contains(BANNED_IPS, clientIp)
+    unless climber.resetting
       Meteor.call('recordPreviousHeights')
       Climbers.update({ _id: _id }, { $inc: { clicks: 1 } })
       Climbers.update({ _id: _id, height: { $lt: MAX_HEIGHT } }, { $inc: { height: 4 } })
