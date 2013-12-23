@@ -1,6 +1,5 @@
 @Climbers = new Meteor.Collection('climbers')
 MAX_HEIGHT = 500
-BANNED_IPS = ['173.164.61.149']
 
 Meteor.methods(
   clickClimber: (_id) ->
