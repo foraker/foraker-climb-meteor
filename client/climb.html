@@ -29,10 +29,7 @@
       </div>
     </header>
     <div class="main">
-      <div class="winner">
-        <div class="check"><img src="/images/dlo-check.png" alt="And the winner is the Children's Hospital." width="780" height="366" /></div>
-        <div class="happydance"><img src="/images/derek-cheering.gif" alt="Derek doing a happy dance." width="166" height="298" /></div>
-      </div>
+      {{> climbing}}
     </div>
     <footer class="bank">
       <a href="http://en.wikipedia.org/wiki/Mount_Foraker" target="_blank"><img src="/images/sign.png" alt="Mt. Foraker" width="166" height="148"></a>
@@ -116,9 +113,21 @@
 </body>
 
 <template name="climbing">
-  {{#each climbers}}
-    {{> climber}}
-  {{/each}}
+  {{#if showWinner}}
+    {{> winner}}
+  {{else}}
+    {{#each climbers}}
+      {{> climber}}
+    {{/each}}
+  {{/if}}
+</template>
+
+<template name="winner">
+  <div class="winner">
+    <div class="check"><img src="/images/dlo-check.png" alt="And the winner is the Children's Hospital." width="780" height="366" />
+    <div><a href="#" class="play-more">Awesome! But let me climb some more...</a></div></div>
+    <div class="happydance"><img src="/images/derek-cheering.gif" alt="Derek doing a happy dance." width="166" height="298" /></div>
+  </div>
 </template>
 
 <template name="climber">

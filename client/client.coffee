@@ -1,5 +1,10 @@
+GAME_OVER = true
+
 Template.climbing.climbers = ->
   Climbers.find({}, {sort: {name: 1}})
+
+Template.climbing.showWinner = ->
+  GAME_OVER && !Session.get("play")
 
 Template.climber.lowercaseName = ->
   @name.toLowerCase()
@@ -39,6 +44,11 @@ Template.climber.events(
       Meteor.call('clickClimber', @_id) if e.x > 0 or e.clientX > 0
   'touchstart': ->
     Meteor.call('clickClimber', @_id)
+)
+
+Template.winner.events(
+  'click a.play-more': (e) ->
+    Session.set('play', true)
 )
 
 $ ->
